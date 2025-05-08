@@ -5,8 +5,8 @@ public class JurosSimples {
     public static void main (String [] args){
 
         //Declaração de variáveis
-        int ju, ca, ta, pra;//ju - Juros; ca - Capital; ta - taxa; pra - Prazo
-        int op
+        double ju, ca, ta, pra;//ju - Juros; ca - Capital; ta - Taxa; pra - Prazo
+        int op;
         
         //Criação de instância de entrada
         Scanner entrada = new Scanner(System.in);
@@ -14,16 +14,34 @@ public class JurosSimples {
         //Apresentação do programa 
         System.out.println("\n\t\t\t--Calculadora de juros simples!!--\n");
 
-        //menu 
+        //Menu 
         System.out.println("1. Calcular juros!");
         System.out.println("2. Calcular capital!");
         System.out.println("3. Calcular taxa!");
-        System.out.println("4. Clacular prazo!");
+        System.out.println("4. Calcular prazo!");
 
-        //Opição do usuário
-        System.out.println("/nOpsão");
+        //Opção do usuário
+        System.out.println("Opção: ");
         op = entrada.nextInt();
 
+        if (op == 1){
+            System.out.println("Calcular juros!");
 
+            //Entradas
+            System.out.println("Informe o Capital: ");
+            ca = entrada.nextDouble();
+            System.out.println("Informe a Taxa:");
+            ta = entrada.nextDouble();
+            System.out.println("Informe o Prazo: ");
+            pra= entrada.nextDouble();
+
+            //Processamento
+
+            ju = (ca * ta * pra) /100;
+
+            //Saida
+            System.out.println("O valor do juros é: " + ju + "\n");
+      
+        }
     }
 }
