@@ -43,5 +43,25 @@ public class JurosSimples {
             System.out.println("O valor do juros é: " + ju + "\n");
       
         }
+
+        if (op == 2){
+            System.out.println("Calcular capital!");
+
+            //Entradas
+            System.out.println("Informe o Juros: ");
+            ju = entrada.nextDouble();
+            System.out.println("Informe a Taxa:");
+            ta = entrada.nextDouble();
+            System.out.println("Informe o Prazo: ");
+            pra= entrada.nextDouble();
+
+            //Processamento
+
+            ca =  ju / ((ta / 100) * pra);
+
+            //Saida
+            System.out.printf("O valor da capital é: R$ %.2f\n\n", ca);
+
+        }
     }
 }
