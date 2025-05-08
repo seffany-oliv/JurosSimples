@@ -80,8 +80,28 @@ public class JurosSimples {
             ta = ju / ( ca * pra ) * 100;
 
             //Saída 
-            System.out.printf("A ataxa será de: " + ta + "\n");
+            System.out.printf("A taxa será de: " + ta + "\n");
 
+        }
+
+        if (op == 4){
+            System.out.println("Calcular o Prazo!");
+
+            //Entrada
+            System.out.println("Informe o Juros:");
+            ju = entrada.nextDouble();
+            System.out.println("Informe o Capital:");
+            ca = entrada.nextDouble();
+            System.out.println("Informe a Taxa:");
+            ta = entrada.nextDouble();
+
+            //Processamento
+
+            pra = ju / (( ca * ta ) / 100);
+
+            //Saída
+            System.out.printf("O prazo será de: %.0f periodos.\n\n", pra);
+                                
         }
     }
 }
